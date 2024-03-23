@@ -6,8 +6,11 @@ name = "pypi"
 [packages]
 google-api-python-client = "*"
 google-auth = "*"
+google-cloud-logging = "*"
 fastapi = "*"
 uvicorn = "*"
+pydantic = "*"
+structlog = "*"
 
 [dev-packages]
 

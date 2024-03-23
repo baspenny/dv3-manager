@@ -50,12 +50,10 @@ def build_service(sa_principal: str, credential_path: str = None, timeout: int =
             source_credentials=source_credentials,
             target_principal=sa_principal,
             target_scopes=target_scopes,
-            quota_project_id=os.environ.get("QUOTA_PROJECT_ID"),
             lifetime=500
         )
-        #
         if os.environ.get("QUOTA_PROJECT_ID"):
-            target_credentials._quota_project_id = os.environ.get("QUOTA_PROJECT_ID")
+            target_credentials._quota_project_id = os.environ.get("QUOTA_PROJECT_ID", 'dqna-cloud')
 
         socket.setdefaulttimeout(timeout)
 

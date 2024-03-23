@@ -1,5 +1,5 @@
 from googleapiclient.discovery import Resource
-from models import LineItemUpdate
+from dv3.line_item_models import LineItemUpdate
 
 
 def update_line_item_status(service: Resource, advertiser_id: str, line_item_id: str, new_status):
@@ -31,8 +31,8 @@ def update_line_item_status(service: Resource, advertiser_id: str, line_item_id:
 
     return response
 
-
-def update_line_items_status(service: Resource, advertiser_id: str, line_item_ids: LineItemUpdate, new_status):
+# @todo: Implement the following function
+def bulk_update_line_items_status(service: Resource, advertiser_id: str, line_item_ids: LineItemUpdate, new_status):
     """
     Update the status of multiple DV360 line items.
 
