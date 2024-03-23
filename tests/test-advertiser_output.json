@@ -1,0 +1,46 @@
+{
+  "name": "advertisers/3753637",
+  "advertiserId": "3753637",
+  "partnerId": "798652",
+  "displayName": "Boj Test",
+  "entityStatus": "ENTITY_STATUS_ACTIVE",
+  "updateTime": "2023-06-27T10:17:21.430527Z",
+  "generalConfig": {
+    "domainUrl": "http://www.blhmedia.nl",
+    "timeZone": "Europe/Copenhagen",
+    "currencyCode": "EUR"
+  },
+  "adServerConfig": {
+    "cmHybridConfig": {
+      "cmAccountId": "2733",
+      "cmFloodlightConfigId": "9124276",
+      "cmAdvertiserIds": [
+        "9124276"
+      ],
+      "cmSyncableSiteIds": [
+        "5182206",
+        "5144467"
+      ],
+      "dv360ToCmDataSharingEnabled": true,
+      "dv360ToCmCostReportingEnabled": true,
+      "cmFloodlightLinkingAuthorized": true
+    }
+  },
+  "creativeConfig": {
+    "videoCreativeDataSharingAuthorized": true
+  },
+  "dataAccessConfig": {
+    "sdfConfig": {
+      "sdfConfig": {
+        "version": "SDF_VERSION_5_5"
+      }
+    }
+  },
+  "integrationDetails": {},
+  "servingConfig": {
+    "exemptTvFromViewabilityTargeting": true
+  },
+  "billingConfig": {
+    "billingProfileId": "882992"
+  }
+}

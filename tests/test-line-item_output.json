@@ -1,0 +1,79 @@
+{
+  "name": "advertisers/6485656018/lineItems/21085527563",
+  "advertiserId": "6485656018",
+  "campaignId": "54276854",
+  "insertionOrderId": "1016065190",
+  "lineItemId": "21085527563",
+  "displayName": "live test standard templates",
+  "lineItemType": "LINE_ITEM_TYPE_DISPLAY_DEFAULT",
+  "entityStatus": "ENTITY_STATUS_ACTIVE",
+  "updateTime": "2024-03-18T14:04:45.696Z",
+  "partnerCosts": [
+    {
+      "costType": "PARTNER_COST_TYPE_DEFAULT",
+      "feeType": "PARTNER_COST_FEE_TYPE_CPM_FEE",
+      "invoiceType": "PARTNER_COST_INVOICE_TYPE_PARTNER",
+      "feeAmount": "0"
+    },
+    {
+      "costType": "PARTNER_COST_TYPE_DEFAULT",
+      "feeType": "PARTNER_COST_FEE_TYPE_CPM_FEE",
+      "invoiceType": "PARTNER_COST_INVOICE_TYPE_PARTNER",
+      "feeAmount": "0"
+    },
+    {
+      "costType": "PARTNER_COST_TYPE_DEFAULT",
+      "feeType": "PARTNER_COST_FEE_TYPE_MEDIA_FEE",
+      "invoiceType": "PARTNER_COST_INVOICE_TYPE_PARTNER",
+      "feePercentageMillis": "15000"
+    },
+    {
+      "costType": "PARTNER_COST_TYPE_DEFAULT",
+      "feeType": "PARTNER_COST_FEE_TYPE_MEDIA_FEE",
+      "invoiceType": "PARTNER_COST_INVOICE_TYPE_PARTNER",
+      "feePercentageMillis": "0"
+    }
+  ],
+  "flight": {
+    "flightDateType": "LINE_ITEM_FLIGHT_DATE_TYPE_INHERITED",
+    "dateRange": {
+      "startDate": {
+        "year": 2024,
+        "month": 3,
+        "day": 8
+      },
+      "endDate": {
+        "year": 2024,
+        "month": 3,
+        "day": 22
+      }
+    }
+  },
+  "budget": {
+    "budgetAllocationType": "LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED",
+    "budgetUnit": "BUDGET_UNIT_CURRENCY",
+    "maxAmount": ""
+  },
+  "pacing": {
+    "pacingPeriod": "PACING_PERIOD_DAILY",
+    "pacingType": "PACING_TYPE_ASAP",
+    "dailyMaxMicros": "10000000"
+  },
+  "frequencyCap": {
+    "unlimited": true
+  },
+  "partnerRevenueModel": {},
+  "conversionCounting": {},
+  "creativeIds": [
+    "559240745",
+    "560105793",
+    "560110522"
+  ],
+  "bidStrategy": {},
+  "integrationDetails": {},
+  "targetingExpansion": {},
+  "warningMessages": [
+    "EXPIRED",
+    "PARENT_INSERTION_ORDER_EXPIRED"
+  ]
+}

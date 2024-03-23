@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from enum import Enum
 from typing import Optional
-from dv3.enums import EntityStatus
+import dv3
 
 
 class SdfVersion(str, Enum):
@@ -76,7 +76,7 @@ class Advertiser(BaseModel):
     advertiserId: str
     partnerId: str
     displayName: str
-    entityStatus: EntityStatus
+    entityStatus: dv3.EntityStatus
     updateTime: str
     generalConfig: AdvertiserGeneralConfig
     adServerConfig: AdvertiserAdServerConfig
