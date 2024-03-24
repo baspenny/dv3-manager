@@ -124,23 +124,23 @@ class PerformanceGoalBidStrategy(BaseModel):
 
 
 class YoutubeAndPartnersBiddingStrategyType(str, Enum):
-    UNSPECIFIED = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_UNSPECIFIED"
-    MANUAL_CPV = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MANUAL_CPV"
-    MANUAL_CPM = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MANUAL_CPM"
-    TARGET_CPA = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_CPA"
-    MAX_CPM = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_CPMA"
-    MAX_LIFT = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_LIFT"
-    MAX_CONVERSIONS = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSIONS"
-    TARGET_CPV = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_CPVA"
-    TARGET_ROAS = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_ROASA"
-    MAX_CONVERSION_VALUE = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSION_VALUE"
+    unspecified = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_UNSPECIFIED"
+    manualCPV = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MANUAL_CPV"
+    manualCPM = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MANUAL_CPM"
+    targetCPA = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_CPA"
+    maxCPM = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_CPMA"
+    maxLift = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_LIFT"
+    maxConversions = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSIONS"
+    targetCPV = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_CPVA"
+    targetROAS = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_TARGET_ROASA"
+    maxConversionValue = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSION_VALUE"
 
 
 class BiddingSource(str, Enum):
     """Mogelijke bronnen voor de effectieve doel-CPA van de advertentiegroep."""
-    UNSPECIFIED = "BIDDING_SOURCE_UNSPECIFIED"  # Bidding source is not specified or unknown
-    LINE_ITEM = "BIDDING_SOURCE_LINE_ITEM"  # Bidding value is inherited from the line item
-    AD_GROUP = "BIDDING_SOURCE_AD_GROUP"  # Bidding value is defined in the ad group
+    unspecified = "BIDDING_SOURCE_UNSPECIFIED"  # Bidding source is not specified or unknown
+    lineItem = "BIDDING_SOURCE_LINE_ITEM"  # Bidding value is inherited from the line item
+    adGroup = "BIDDING_SOURCE_AD_GROUP"  # Bidding value is defined in the ad group
 
 
 class YoutubeAndPartnersBiddingStrategy(BaseModel):
@@ -186,7 +186,104 @@ class PartnerRevenueModel(BaseModel):
     markup_type: Optional[PartnerRevenueModelMarkupType] = None
     markup_amount: Optional[str] = None
 
+
 class BudgetUnit(str, Enum):
     unspecified = "BUDGET_UNIT_UNSPECIFIED"
     currency = "BUDGET_UNIT_CURRENCY"
     impressions = "BUDGET_UNIT_IMPRESSIONS"
+
+
+class Exchange(str, Enum):
+    unspecified = 'EXCHANGE_UNSPECIFIED'
+    googleAdManager = 'EXCHANGE_GOOGLE_AD_MANAGER'
+    appNexus = 'EXCHANGE_APPNEXUS'
+    brightroll = 'EXCHANGE_BRIGHTROLL'
+    adform = 'EXCHANGE_ADFORM'
+    admeta = 'EXCHANGE_ADMETA'
+    admixer = 'EXCHANGE_ADMIXER'
+    adsmogo = 'EXCHANGE_ADSMOGO'
+    adswizz = 'EXCHANGE_ADSWIZZ'
+    bidswitch = 'EXCHANGE_BIDSWITCH'
+    brightrollDisplay = 'EXCHANGE_BRIGHTROLL_DISPLAY'
+    cadreon = 'EXCHANGE_CADREON'
+    dailymotion = 'EXCHANGE_DAILYMOTION'
+    five = 'EXCHANGE_FIVE'
+    fluct = 'EXCHANGE_FLUCT'
+    freewheel = 'EXCHANGE_FREEWHEEL'
+    geniee = 'EXCHANGE_GENIEE'
+    gumgum = 'EXCHANGE_GUMGUM'
+    imobile = 'EXCHANGE_IMOBILE'
+    ibillboard = 'EXCHANGE_IBILLBOARD'
+    improveDigital = 'EXCHANGE_IMPROVE_DIGITAL'
+    index = 'EXCHANGE_INDEX'
+    kargo = 'EXCHANGE_KARGO'
+    microad = 'EXCHANGE_MICROAD'
+    mopub = 'EXCHANGE_MOPUB'
+    nend = 'EXCHANGE_NEND'
+    oneByAolDisplay = 'EXCHANGE_ONE_BY_AOL_DISPLAY'
+    oneByAolMobile = 'EXCHANGE_ONE_BY_AOL_MOBILE'
+    oneByAolVideo = 'EXCHANGE_ONE_BY_AOL_VIDEO'
+    ooyala = 'EXCHANGE_OOYALA'
+    openx = 'EXCHANGE_OPENX'
+    permodo = 'EXCHANGE_PERMODO'
+    platformOne = 'EXCHANGE_PLATFORMONE'
+    platformId = 'EXCHANGE_PLATFORMID'
+    pubmatic = 'EXCHANGE_PUBMATIC'
+    pulsepoint = 'EXCHANGE_PULSEPOINT'
+    revenueMax = 'EXCHANGE_REVENUEMAX'
+    rubicon = 'EXCHANGE_RUBICON'
+    smartclip = 'EXCHANGE_SMARTCLIP'
+    smartrtb = 'EXCHANGE_SMARTRTB'
+    smartstreamTv = 'EXCHANGE_SMARTSTREAMTV'
+    sovrn = 'EXCHANGE_SOVRN'
+    spotxchange = 'EXCHANGE_SPOTXCHANGE'
+    stroer = 'EXCHANGE_STROER'
+    teadstv = 'EXCHANGE_TEADSTV'
+    telaria = 'EXCHANGE_TELARIA'
+    tvn = 'EXCHANGE_TVN'
+    united = 'EXCHANGE_UNITED'
+    yieldlab = 'EXCHANGE_YIELDLAB'
+    yieldmo = 'EXCHANGE_YIELDMO'
+    unrulyx = 'EXCHANGE_UNRULYX'
+    open8 = 'EXCHANGE_OPEN8'
+    triton = 'EXCHANGE_TRITON'
+    triplelift = 'EXCHANGE_TRIPLELIFT'
+    taboola = 'EXCHANGE_TABOOLA'
+    inmobi = 'EXCHANGE_INMOBI'
+    smaato = 'EXCHANGE_SMAATO'
+    aja = 'EXCHANGE_AJA'
+    supership = 'EXCHANGE_SUPERSHIP'
+    nexstarDigital = 'EXCHANGE_NEXSTAR_DIGITAL'
+    waze = 'EXCHANGE_WAZE'
+    soundcast = 'EXCHANGE_SOUNDCAST'
+    sharethrough = 'EXCHANGE_SHARETHROUGH'
+    fyber = 'EXCHANGE_FYBER'
+    redForPublishers = 'EXCHANGE_RED_FOR_PUBLISHERS'
+    medianet = 'EXCHANGE_MEDIANET'
+    tapjoy = 'EXCHANGE_TAPJOY'
+    vistar = 'EXCHANGE_VISTAR'
+    dax = 'EXCHANGE_DAX'
+    jcd = 'EXCHANGE_JCD'
+    placeExchange = 'EXCHANGE_PLACE_EXCHANGE'
+    applovin = 'EXCHANGE_APPLOVIN'
+    connatix = 'EXCHANGE_CONNATIX'
+    resetDigital = 'EXCHANGE_RESET_DIGITAL'
+    hivestack = 'EXCHANGE_HIVESTACK'
+    applovinGbid = 'EXCHANGE_APPLOVIN_GBID'
+    fyberGbid = 'EXCHANGE_FYBER_GBID'
+    unityGbid = 'EXCHANGE_UNITY_GBID'
+    chartboostGbid = 'EXCHANGE_CHARTBOOST_GBID'
+    admostGbid = 'EXCHANGE_ADMOST_GBID'
+    toponGbid = 'EXCHANGE_TOPON_GBID'
+
+
+class SdfVersion(str, Enum):
+    V5 = "SDF_VERSION_5"
+    V5_4 = "SDF_VERSION_5_4"
+    V5_5 = "SDF_VERSION_5_5"
+    V6 = "SDF_VERSION_6"
+    V7 = "SDF_VERSION_7"
+
+class SdfConfig(BaseModel):
+    version: SdfVersion
+    adminEmail: Optional[str] = None

@@ -1,0 +1,111 @@
+{
+  "name": "partners/2104250",
+  "partnerId": "2104250",
+  "updateTime": "2024-03-01T08:25:11.235Z",
+  "displayName": "TP - TEST ACCOUNT DQ&A - 365 - DBM - NL",
+  "entityStatus": "ENTITY_STATUS_ACTIVE",
+  "generalConfig": {
+    "timeZone": "Europe/Copenhagen",
+    "currencyCode": "EUR"
+  },
+  "adServerConfig": {
+    "measurementConfig": {}
+  },
+  "dataAccessConfig": {
+    "sdfConfig": {
+      "version": "SDF_VERSION_5_5"
+    }
+  },
+  "exchangeConfig": {
+    "enabledExchanges": [
+      {
+        "exchange": "EXCHANGE_GOOGLE_AD_MANAGER",
+        "googleAdManagerAgencyId": "0",
+        "googleAdManagerBuyerNetworkId": "1505"
+      },
+      {
+        "exchange": "EXCHANGE_BRIGHTROLL_DISPLAY"
+      },
+      {
+        "exchange": "EXCHANGE_PUBMATIC"
+      },
+      {
+        "exchange": "EXCHANGE_RUBICON"
+      },
+      {
+        "exchange": "EXCHANGE_OPENX"
+      },
+      {
+        "exchange": "EXCHANGE_APPNEXUS"
+      },
+      {
+        "exchange": "EXCHANGE_IMPROVE_DIGITAL"
+      },
+      {
+        "exchange": "EXCHANGE_PULSEPOINT"
+      },
+      {
+        "exchange": "EXCHANGE_ADMETA"
+      },
+      {
+        "exchange": "EXCHANGE_ONE_BY_AOL_VIDEO"
+      },
+      {
+        "exchange": "EXCHANGE_MOPUB"
+      },
+      {
+        "exchange": "EXCHANGE_SPOTXCHANGE"
+      },
+      {
+        "exchange": "EXCHANGE_STROER"
+      },
+      {
+        "exchange": "EXCHANGE_ONE_BY_AOL_MOBILE"
+      },
+      {
+        "exchange": "EXCHANGE_YIELDLAB",
+        "seatId": "49867"
+      },
+      {
+        "exchange": "EXCHANGE_ONE_BY_AOL_DISPLAY"
+      },
+      {
+        "exchange": "EXCHANGE_SMARTCLIP",
+        "seatId": "SmartX-DBM-XX-2-10"
+      },
+      {
+        "exchange": "EXCHANGE_BIDSWITCH"
+      },
+      {
+        "exchange": "EXCHANGE_TELARIA"
+      },
+      {
+        "exchange": "EXCHANGE_FREEWHEEL"
+      },
+      {
+        "exchange": "EXCHANGE_FLUCT"
+      },
+      {
+        "exchange": "EXCHANGE_APPLOVIN_GBID"
+      },
+      {
+        "exchange": "EXCHANGE_UNITY_GBID"
+      },
+      {
+        "exchange": "EXCHANGE_FYBER_GBID"
+      },
+      {
+        "exchange": "EXCHANGE_CHARTBOOST_GBID"
+      },
+      {
+        "exchange": "EXCHANGE_ADMOST_GBID"
+      },
+      {
+        "exchange": "EXCHANGE_TOPON_GBID"
+      }
+    ]
+  },
+  "billingConfig": {
+    "billingProfileId": "594174"
+  }
+}

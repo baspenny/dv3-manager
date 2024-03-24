@@ -6,11 +6,28 @@ from dv3.line_item_models import LineItem
 
 from pathlib import Path
 
+from dv3.partner_models import Partner
+
 
 class TestModels(unittest.TestCase):
     # @patch('dv3.service.build_service')
     def setUp(self):
         self.service = Mock()
+
+    def test_partner_model(self):
+        with open(Path(__file__).parent.parent / 'test_partner_output.json', 'r') as f:
+            mock_partner_data = json.load(f)
+        self.service.partners().get().execute.return_value = mock_partner_data
+
+        res = self.service.partners().get(
+            partnerId='2104250'
+        ).execute()
+
+        partner = Partner.model_validate(res)
+        # print(partner.model_dump(exclude_none=True))
+        self.assertEqual(partner.name, 'partners/2104250')
+        self.assertEqual(partner.partnerId, '2104250')
+        self.assertEqual(partner.displayName, 'TP - TEST ACCOUNT DQ&A - 365 - DBM - NL')
 
     def test_advertiser_model(self):
         with open(Path(__file__).parent.parent / 'test-advertiser_output.json', 'r') as f:

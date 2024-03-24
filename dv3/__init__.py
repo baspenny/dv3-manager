@@ -6,5 +6,7 @@ from .types import (
     BiddingStrategy,
     FrequencyCap,
     PartnerRevenueModel,
-    BudgetUnit
+    BudgetUnit,
+    Exchange,
+    SdfConfig
 )

@@ -15,8 +15,6 @@ class LineItemFlight(BaseModel):
     dateRange: dv3.DateRange
 
 
-
-
 class LineItemBudgetAllocationType(str, Enum):
     unspecified = "LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNSPECIFIED"
     automatic = "LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC"
@@ -41,10 +39,11 @@ class IntegrationDetails(BaseModel):
 
 
 class AudienceExpansionLevel(str, Enum):
-    unspecified = "AUDIENCE_EXPANSION_LEVEL_UNSPECIFIED"
-    none = "NONE"
-    minimal = "MINIMAL"
-    agressive = "AGRESSIVE"
+    unknown = "UNKNOWN"
+    noReach = "NO_REACH"
+    leastReach = "LEAST_REACH"
+    midReach = "MID_REACH"
+    mostReach = "MOST_REACH"
 
 
 class TargetingExpansionConfig(BaseModel):

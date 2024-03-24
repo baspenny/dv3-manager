@@ -1,15 +1,6 @@
 from pydantic import BaseModel
-from enum import Enum
 from typing import Optional
 import dv3
-
-
-class SdfVersion(str, Enum):
-    V5 = "SDF_VERSION_5"
-    V5_4 = "SDF_VERSION_5_4"
-    V5_5 = "SDF_VERSION_5_5"
-    V6 = "SDF_VERSION_6"
-    V7 = "SDF_VERSION_7"
 
 
 class AdvertiserGeneralConfig(BaseModel):
@@ -44,14 +35,9 @@ class AdvertiserCreativeConfig(BaseModel):
     videoCreativeDataSharingAuthorized: Optional[bool] = None
 
 
-class SdfConfig(BaseModel):
-    version: SdfVersion
-    adminEmail: Optional[str] = None
-
-
 class AdvertiserSdfConfig(BaseModel):
     overridePartnerSdfConfig: Optional[bool] = None
-    sdfConfig: Optional[dict] = None
+    sdfConfig: dv3.SdfConfig = None
 
 
 class AdvertiserDataAccessConfig(BaseModel):

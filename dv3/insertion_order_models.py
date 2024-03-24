@@ -12,21 +12,21 @@ class IntegrationDetails(BaseModel): ...  # Onvolledig, vul aan op basis van JSO
 
 class KpiType(str, Enum):
     """Mogelijke KPI-typen."""
-    unspecified = "KPI_TYPE_UNSPECIFIED"  # Lowercase for consistency with enum members
-    cpm = "KPI_TYPE_CPM"
-    cpc = "KPI_TYPE_CPC"
-    cpa = "KPI_TYPE_CPA"
-    ctr = "KPI_TYPE_CTR"
-    viewability = "KPI_TYPE_VIEWABILITY"
-    cpiavc = "KPI_TYPE_CPIAVC"
-    cpe = "KPI_TYPE_CPE"
-    clickCvr = "KPI_TYPE_CLICK_CVR"  # Combine words with uppercase first letter
-    impressionCvr = "KPI_TYPE_IMPRESSION_CVR"
-    vcpm = "KPI_TYPE_VCPM"
-    vtr = "KPI_TYPE_VTR"
-    audioCompletionRate = "KPI_TYPE_AUDIO_COMPLETION_RATE"  # Combine words with uppercase first letter
-    videoCompletionRate = "KPI_TYPE_VIDEO_COMPLETION_RATE"
-    other = "KPI_TYPE_OTHER"
+    KPI_TYPE_UNSPECIFIED = "KPI_TYPE_UNSPECIFIED"  # Lowercase for consistency with enum members
+    KPI_TYPE_CPM = "KPI_TYPE_CPM"
+    KPI_TYPE_CPC = "KPI_TYPE_CPC"
+    KPI_TYPE_CPA = "KPI_TYPE_CPA"
+    KPI_TYPE_CTR = "KPI_TYPE_CTR"
+    KPI_TYPE_VIEWABILITY = "KPI_TYPE_VIEWABILITY"
+    KPI_TYPE_CPIAVC = "KPI_TYPE_CPIAVC"
+    KPI_TYPE_CPE = "KPI_TYPE_CPE"
+    KPI_TYPE_CLICK_CVR = "KPI_TYPE_CLICK_CVR"  # Combine words with uppercase first letter
+    KPI_TYPE_IMPRESSION_CVR = "KPI_TYPE_IMPRESSION_CVR"
+    KPI_TYPE_VCPM = "KPI_TYPE_VCPM"
+    KPI_TYPE_VTR = "KPI_TYPE_VTR"
+    KPI_TYPE_AUDIO_COMPLETION_RATE = "KPI_TYPE_AUDIO_COMPLETION_RATE"  # Combine words with uppercase first letter
+    KPI_TYPE_VIDEO_COMPLETION_RATE = "KPI_TYPE_VIDEO_COMPLETION_RATE"
+    KPI_TYPE_OTHER = "KPI_TYPE_OTHER"
 
 
 class Kpi(BaseModel):
@@ -37,7 +37,7 @@ class Kpi(BaseModel):
 
 
 class InsertionOrderType(Enum):
-    UNSPECIFIED = "INSERTION_ORDER_TYPE_UNSPECIFIED"
+    INSERTION_ORDER_TYPE_UNSPECIFIED = "INSERTION_ORDER_TYPE_UNSPECIFIED"
     RTB = "RTB"
     OVER_THE_TOP = "OVER_THE_TOP"
 
