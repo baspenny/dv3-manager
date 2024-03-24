@@ -8,5 +8,6 @@ from .types import (
     PartnerRevenueModel,
     BudgetUnit,
     Exchange,
-    SdfConfig
+    SdfConfig,
+    IntegrationDetails
 )

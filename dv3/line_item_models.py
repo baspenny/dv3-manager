@@ -28,16 +28,6 @@ class LineItemBudget(BaseModel):
     maxAmount: str = ''
 
 
-class ConversionCountingConfig(BaseModel):
-    # Define fields for ConversionCountingConfig if needed
-    pass
-
-
-class IntegrationDetails(BaseModel):
-    # Define fields for IntegrationDetails if needed
-    pass
-
-
 class AudienceExpansionLevel(str, Enum):
     unknown = "UNKNOWN"
     noReach = "NO_REACH"
@@ -52,9 +42,17 @@ class TargetingExpansionConfig(BaseModel):
     audienceExpansionLevel: Optional[AudienceExpansionLevel] = None
 
 
+class Platform(str, Enum):
+    unspecified = 'PLATFORM_UNSPECIFIED'
+    iOS = 'IOS'
+    android = 'ANDROID'
+
+
 class MobileApp(BaseModel):
-    # Define fields for MobileApp if needed
-    pass
+    appId: str
+    platform: Platform
+    displayName: str
+    publisher: str
 
 
 class LineItemWarningMessage(str, Enum):
@@ -94,6 +92,17 @@ class LineItemType(str, Enum):
     youtubeAndPartnersTargetView = "LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIEW"
 
 
+class TrackingFloodlightActivityConfig(BaseModel):
+    floodlightActivityId: str
+    postClickLookbackWindowDays: int
+    postViewLookbackWindowDays: int
+
+
+class ConversionCountingConfig(BaseModel):
+    postViewCountPercentageMillis: Optional[str] = None
+    floodlightActivityConfigs: Optional[List[TrackingFloodlightActivityConfig]] = None
+
+
 class LineItem(BaseModel):
     name: str
     advertiserId: str
@@ -110,10 +119,10 @@ class LineItem(BaseModel):
     pacing: dv3.Pacing
     frequencyCap: dv3.FrequencyCap
     partnerRevenueModel: dv3.PartnerRevenueModel
-    conversionCounting: ConversionCountingConfig
+    conversionCounting: Optional[ConversionCountingConfig] = None
     creativeIds: List[str] = []
     bidStrategy: dv3.BiddingStrategy
-    integrationDetails: IntegrationDetails
+    integrationDetails: dv3.IntegrationDetails
     targetingExpansion: Optional[TargetingExpansionConfig] = None
     warningMessages: List[LineItemWarningMessage] = []
     mobileApp: MobileApp = None

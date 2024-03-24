@@ -284,6 +284,12 @@ class SdfVersion(str, Enum):
     V6 = "SDF_VERSION_6"
     V7 = "SDF_VERSION_7"
 
+
 class SdfConfig(BaseModel):
     version: SdfVersion
     adminEmail: Optional[str] = None
+
+
+class IntegrationDetails(BaseModel):
+    integrationCode: Optional[str] = None
+    details: Optional[str] = None
